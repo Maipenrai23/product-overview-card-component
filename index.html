@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Product preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing:border-box;
+    }
+    :root{
+      --primary1: hsl(158, 36%, 37%);
+      --primaryBg: hsl(30, 38%, 92%);
+
+      --NVerydarkblue: hsl(212, 21%, 14%);
+      --NDarkgrayishblue: hsl(228, 12%, 48%);
+      --NWhite: hsl(0, 0%, 100%);
+    }
+@font-face {
+  font-family: font1;
+  src: url(/assets/fonts/Montserrat/static/Montserrat-Regular.ttf);
+}
+@font-face {
+  font-family:font2;
+  src: url(/assets/fonts/Fraunces/static/Fraunces_144pt/Fraunces_144pt-Regular.ttf);
+}
+
+
+body{
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+    margin: 0;
+    font-family: font1;
+    background-color: var(--primaryBg);
+}
+main{
+    width: 550px;
+    margin-bottom:5rem;
+}
+@media only screen and (max-width: 500px) {
+  main{
+    width: 100%;
+}
+}
+
+.items{
+  justify-content: center;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  place-items: center;
+  overflow: hidden;
+}
+@media only screen and (max-width: 500px) {
+  .items{
+    grid-template-columns: none;
+    width: 350px;
+    border-radius:20px ;
+}
+}
+
+.items img{
+    max-width: 100%;
+    object-fit:cover;
+}
+@media only screen and (max-width: 500px) {
+  .items img{
+    display:none;
+}
+}
+.items .detail{
+  background-color: var(--NWhite);
+  padding: 2rem;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  box-shadow: 10px 10px 5px #aaaaaa;
+}
+@media only screen and (max-width: 500px) {
+  .items .detail{
+    padding:unset;
+  }
+  
+}
+.items .detail .mb{
+    display:none;
+}
+
+@media only screen and (max-width: 500px) {
+  .items .detail .mb{
+    display:block;
+    width: 100%;
+    object-fit: cover;
+    margin: 0;    
+        }
+        .items .detail .text{
+          padding: 2rem;
+}
+}
+
+.items .detail .title{
+    margin-bottom: 1rem;
+    font-family: font1;
+}
+.items .detail h1{
+    font-family: font2;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+.items .detail p{
+    margin-bottom: .5rem;
+}
+.price{
+  display: flex;
+  text-align: center;
+}
+.price h1{
+  font-family: font2;
+  color: var(--primary1);
+  font-weight: 700;
+}
+.price p{
+  margin-left: 1rem;
+  margin-top: 12px;
+  text-decoration: line-through;
+  
+}
+.detail a{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  place-items: center;
+  color: var(--NWhite);
+  padding: .5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  background-color: var(--primary1);
+}
+.detail img{
+  margin-right: .5rem;
+}
+p{
+  font-size: 14px;
+}
+
+    .footer { font-size: 11px; text-align: center;}
+    .footer a { color: hsl(228, 45%, 44%); }
+
+
+  </style>
+</head>
+<body>
+
+  <main>
+   
+      <div class="items">
+          <img src="/images/image-product-desktop.jpg" alt="">
+          <div class="detail">
+            <img src="/images/image-product-mobile.jpg" alt="" class="mb">
+            <div class="text">
+            <p class="title">P E R F U M E </p>
+            <h1>  Gabrielle Essence Eau De Parfum</h1>
+            <p>  A floral, solar and voluptuous interpretation composed by Olivier Polge, 
+              Perfumer-Creator for the House of CHANEL.</p>
+              <div class="price">
+                <h1>  $149.99</h1>
+                <p> $169.99</p>
+              </div>
+              <a href="" class="btn"><img src="/images/icon-cart.svg" alt=""> Add to Cart</a>
+            </div>
+            </div>
+      </div>
+    
+  </main>
+
+
+
+
+
+
+
+ 
+
+ 
+  
+  <div class="footer">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Maiphan_BK</a>.
+  </div>
+</body>
+</html>
